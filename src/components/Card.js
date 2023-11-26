@@ -54,7 +54,7 @@ export default function Card(props) {
     //   return
     // }
 
-    await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size })
+    await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size, img: props.ImgSrc })
 
 
     // setBtnEnable(true)

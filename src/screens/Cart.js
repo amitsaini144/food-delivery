@@ -7,7 +7,7 @@ export default function Cart() {
   if (data.length === 0) {
     return (
       <div>
-        <div className='m-5 w-100 text-center fs-3'>The Cart is Empty!</div>
+        <div className='m-5 w-100 text-center fs-3 text-white'>The Cart is Empty!</div>
       </div>
     )
   }
@@ -45,7 +45,7 @@ export default function Cart() {
       {console.log(data)}
       <div className='container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md' >
         <table className='table table-hover '>
-          <thead className=' text-success fs-4'>
+          <thead className=' text-white fs-4'>
             <tr>
               <th scope='col' >#</th>
               <th scope='col' >Name</th>
@@ -54,10 +54,11 @@ export default function Cart() {
               <th scope='col' >Amount</th>
               <th scope='col' ></th>
             </tr>
+            
           </thead>
           <tbody>
             {data.map((food, index) => (
-              <tr>
+              <tr className='text-white'>
                 <th scope='row' >{index + 1}</th>
                 <td >{food.name}</td>
                 <td>{food.qty}</td>
@@ -69,9 +70,9 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
+        <div><h1 className='fs-2 text-white'>Total Price: {totalPrice}/-</h1 ></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='btn bg-success mt-5 text-white rounded-pill' onClick={handleCheckOut} > Buy Now</button>
         </div>
       </div>
 

@@ -23,7 +23,7 @@ export default function MyOrder() {
             await setorderData(response)
         })
 
-
+console.log(orderData);
 
         // await res.map((data)=>{
         //    console.log(data)
@@ -52,9 +52,10 @@ export default function MyOrder() {
                                     return (
                                         item.map((arrayData) => {
                                             return (
+                                                
                                                 <div  >
                                                     {arrayData.Order_date ? <div className='m-auto mt-5'>
-
+                                                    
                                                         {data = arrayData.Order_date}
                                                         <hr />
                                                     </div> :
